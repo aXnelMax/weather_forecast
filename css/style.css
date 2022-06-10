@@ -10,7 +10,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: #7FA8C5;
+    /*background-color: #7FA8C5;*/
     height: 100vh;
     width: 100%;
     top: 50%;
@@ -58,11 +58,26 @@
     text-align: center;
     margin: 15px;
 }
-.weather__img {
+.weather__detailed {
     position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
+    color: #ffffff;
+}
+.weather__img {
+    position: absolute;
+    z-index: 1;
+    left: 32%;
+    width: 90px;
+    height: 90px;
+}
+.weather__info-container {
+    z-index: 0;
+    margin: 40px 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(216, 214, 255, 0.671) 0%, #71BFF0 100%);
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 10px #77777791);
 }
 
 .sun {
@@ -75,7 +90,7 @@
     background-image: url(../img/sun_cloud.png);
     background-repeat: no-repeat;
     background-size: contain;
-    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+    filter: drop-shadow(1px 10px 5px #ffffff91);
 }
 .snow {
     background-image: url(../img/snow.png);
@@ -100,4 +115,25 @@
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.weather__info-title {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 0;
+}
+.wind__title {
+    width: 55px;
+}
+.weather__info-value {
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+.temperature {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
 }
