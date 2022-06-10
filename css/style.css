@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #7FA8C5;
+    height: 100vh;
+    width: 100%;
+    top: 50%;
+}
+
+.container__info {
+    background: linear-gradient(180deg, rgba(244, 249, 253, 0.35) 0%, rgba(245, 245, 247, 0.35) 100%);
+    backdrop-filter: blur(77.8321px);
+    position: relative;
+    top: 18%;
+    max-width: 330px;
+    min-height: 630px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 40px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+.container__daily {
+    /*border: 1px solid black;*/
+    min-height: 60%;
+    margin: 25px;
+    font-weight: 900;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #353E5E;
+}
+.currect__weather {
+    margin-bottom: 5px;
+}
+.current__time {
+    font-weight: 400;
+    opacity: 0.5;
+}
+.avatar {
+    max-width: 30%;
+}
+.location {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px;
+}
+.weather__img {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.sun {
+    background-image: url(../img/sun.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.sun__cloud {
+    background-image: url(../img/sun_cloud.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.snow {
+    background-image: url(../img/snow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.sun__lightning {
+    background-image: url(../img/sun_lightning.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.sun__cloud-big {
+    background-image: url(../img/sun_cloud_big.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
+.rain {
+    background-image: url(../img/rain.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 10px 10px #3d3d3d91);
+}
