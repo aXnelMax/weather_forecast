@@ -30,38 +30,47 @@
     margin: 0 auto;
     opacity: 0.9;
 }
+
 .container__daily {
     /*border: 1px solid black;*/
     min-height: 60%;
     margin: 25px;
     font-weight: 900;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #353E5E;
 }
-.currect__weather {
+
+.current__weather {
     margin-bottom: 5px;
+    font-size: 20px;
 }
+
 .current__time {
     font-weight: 400;
     opacity: 0.5;
 }
+
 .avatar {
     max-width: 30%;
 }
+
 .location {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
     margin: 15px;
 }
+
 .weather__detailed {
     position: relative;
     color: #ffffff;
 }
+
 .weather__img {
     position: absolute;
     z-index: 1;
@@ -69,15 +78,19 @@
     width: 90px;
     height: 90px;
 }
+
 .weather__info-container {
     z-index: 0;
     margin: 40px 0;
     height: 200px;
     width: 100%;
+    padding-left: 10px;
     position: absolute;
-    background: linear-gradient(180deg, rgba(216, 214, 255, 0.671) 0%, #71BFF0 100%);
+    /*background: linear-gradient(180deg, rgba(216, 214, 255, 0.671) 0%, #71BFF0 100%);*/
     border-radius: 15px;
     filter: drop-shadow(0px 0px 10px #77777791);
+    background: linear-gradient(180deg, rgba(188, 186, 253, 0.52) 0%, #71BFF0 100%);
+    box-shadow: -2.78321px -2.78321px 25.1329px rgba(255, 255, 255, 0.85), 7.78321px 7.78321px 31.1329px -3.11329px rgba(91, 115, 134, 0.78), inset 12.4531px 14.0098px 14.0098px rgba(255, 255, 255, 0.33), inset -9.33986px -10.8965px 12.4531px rgba(0, 0, 0, 0.05);
 }
 
 .sun {
@@ -86,45 +99,53 @@
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
 }
+
 .sun__cloud {
     background-image: url(../img/sun_cloud.png);
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 5px #ffffff91);
 }
+
 .snow {
     background-image: url(../img/snow.png);
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
 }
+
 .sun__lightning {
     background-image: url(../img/sun_lightning.png);
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
 }
+
 .sun__cloud-big {
     background-image: url(../img/sun_cloud_big.png);
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
 }
+
 .rain {
     background-image: url(../img/rain.png);
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 10px 10px #3d3d3d91);
 }
+
 .weather__info-title {
     font-size: 10px;
     display: flex;
     justify-content: space-between;
     margin: 20px 10px 0;
 }
+
 .wind__title {
     width: 55px;
 }
+
 .weather__info-value {
     font-size: 20px;
     font-weight: 800;
@@ -132,8 +153,60 @@
     justify-content: space-between;
     margin: 0 10px;
 }
+
 .temperature {
     margin: 0 auto;
     text-align: center;
     font-size: 30px;
+}
+
+.days__container {
+    margin-top: 280px;
+}
+
+.days__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day__title {
+    color: #353E5E;
+    font-size: 18px;
+}
+
+.calendar__button {
+    color: #399EFE;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.days__items {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.day__item {
+    border-radius: 25px;
+    background: linear-gradient(165.75deg, #F4F2F2 7.77%, #EAEAEA 94.11%);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.85), 3px 5px 10px 3px rgba(91, 115, 134, 0.78);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.day__name {
+    opacity: 0.4;
+    color: #000000;
+    padding: 5px;
+}
+
+.day__img {
+    margin: 0 7px;
+}
+
+.day__temperature {
+    padding: 0 0 10px;
 }
