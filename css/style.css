@@ -210,3 +210,6 @@
 .day__temperature {
     padding: 0 0 10px;
 }
+.current_temp {
+    display: inline;
+}
