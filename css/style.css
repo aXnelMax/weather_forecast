@@ -209,7 +209,11 @@
 
 .day__temperature {
     padding: 0 0 10px;
+    font-size: 14px;
 }
 .current_temp {
+    display: inline;
+}
+.temp_value {
     display: inline;
 }

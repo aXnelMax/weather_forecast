@@ -1,6 +1,6 @@
 const APIkeyWeather = "93e267578342448f8ae82600221106"; //free API key from www.weatherapi.com
 const APIkeyIP = "c24ca686122a40fd8d25744da35dd2d5";    // free API key from abstractapi.com
-
+const NUMBER_OF_NEXT_DAYS = 3;
 let urlGetIP = `https://ipgeolocation.abstractapi.com/v1/?api_key=${APIkeyIP}`;
 
 GetIP(urlGetIP, function (response) {
@@ -46,6 +46,11 @@ function getWeather(url, callback) {
 };
 
 function updateWeather (data) {
+
+    let days = document.querySelectorAll('.day__name');
+    let temp = document.querySelectorAll('.temp_value');
+    let nextDays = getDay();
+
     document.querySelector('.current__time').innerHTML = data.current.last_updated;
     document.querySelector('.current_temp').innerHTML = data.current.temp_c;
     document.querySelector('.current__weather').innerHTML = data.current.condition.text;
@@ -53,5 +58,24 @@ function updateWeather (data) {
     document.querySelector('.humidity__value').innerHTML = data.current.humidity + "%";
     document.querySelector('.wind__value').innerHTML = data.current.wind_kph + "km";
 
+    for (let i = 0; i < nextDays.length; i++) {
+        days[i].innerHTML = nextDays[i];
+        temp[i].innerHTML = data.forecast.forecastday[i].day.avgtemp_c;
+    }
+    
     console.log(data);
+}
+
+function getDay () {
+
+    let date = new Date();
+    let options = { weekday: 'long'};
+    let nextDays = [];
+
+    for (let i = 0; i < NUMBER_OF_NEXT_DAYS; i++){
+    date.setDate(date.getDate()+1);
+    nextDays.push(Intl.DateTimeFormat('en-US', options).format(date).charAt(0)); 
+    }
+
+    return nextDays;
 }
