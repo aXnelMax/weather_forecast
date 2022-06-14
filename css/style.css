@@ -74,9 +74,7 @@
 .weather__img {
     position: absolute;
     z-index: 1;
-    left: 32%;
-    width: 90px;
-    height: 90px;
+    left: 36%;
 }
 
 .weather__info-container {
@@ -86,7 +84,6 @@
     width: 100%;
     padding-left: 10px;
     position: absolute;
-    /*background: linear-gradient(180deg, rgba(216, 214, 255, 0.671) 0%, #71BFF0 100%);*/
     border-radius: 15px;
     filter: drop-shadow(0px 0px 10px #77777791);
     background: linear-gradient(180deg, rgba(188, 186, 253, 0.52) 0%, #71BFF0 100%);
@@ -101,9 +98,9 @@
 }
 
 .sun__cloud {
-    background-image: url(../img/sun_cloud.png);
+    /*background-image: url(../img/sun_cloud.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;*/
     filter: drop-shadow(1px 10px 5px #ffffff91);
 }
 

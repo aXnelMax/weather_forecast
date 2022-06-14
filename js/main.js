@@ -49,6 +49,7 @@ function updateWeather (data) {
 
     let days = document.querySelectorAll('.day__name');
     let temp = document.querySelectorAll('.temp_value');
+    let icon = document.querySelectorAll('.day__img > img');
     let nextDays = getDay();
 
     document.querySelector('.current__time').innerHTML = data.current.last_updated;
@@ -57,11 +58,14 @@ function updateWeather (data) {
     document.querySelector('.location').innerHTML = data.location.name;
     document.querySelector('.humidity__value').innerHTML = data.current.humidity + "%";
     document.querySelector('.wind__value').innerHTML = data.current.wind_kph + "km";
+    document.querySelector('.weather__img > img').src = "https:" + data.current.condition.icon;
 
     for (let i = 0; i < nextDays.length; i++) {
         days[i].innerHTML = nextDays[i];
         temp[i].innerHTML = data.forecast.forecastday[i].day.avgtemp_c;
+        icon[i].src = "https:" + data.forecast.forecastday[i].day.condition.icon;
     }
+    
     
     console.log(data);
 }
