@@ -83,7 +83,3 @@ function getDay () {
 
     return nextDays;
 }
-
-function test () {
-    console.log('test');
-} 
